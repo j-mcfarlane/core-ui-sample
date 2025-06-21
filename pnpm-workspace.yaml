@@ -1,0 +1,4 @@
+packages:
+    - 'developer/*'
+    - 'domains/*'
+    - 'packages/*'

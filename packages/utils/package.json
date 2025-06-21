@@ -1,0 +1,31 @@
+{
+    "name": "@core/utils",
+    "main": "./dist/utils.umd.js",
+    "module": "./dist/utils.es.js",
+    "types": "./dist/index.d.ts",
+    "unpkg": "./dist/utils.umd.js",
+    "exports": {
+        ".": {
+            "main": "./dist/utils.umd.js",
+            "module": "./dist/utils.es.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "PACKAGE_NAME=utils vite build",
+        "lint": "eslint ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "clean": "rm -rf node_modules",
+        "test": "vitest",
+        "test:w": "vitest --watch",
+        "test:coverage": "vitest --coverage"
+    },
+    "peerDependencies": {
+        "@tailwindcss/cli": "^4",
+        "@tanstack/react-router": "^1",
+        "@tanstack/react-start": "^1.121.30",
+        "outdent": "^0.8.0"
+    },
+    "devDependencies": {
+        "tailwind-merge": "^3.2.0"
+    }
+}

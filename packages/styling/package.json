@@ -1,0 +1,35 @@
+{
+    "name": "@core/styling",
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/styling.umd.js",
+    "module": "./dist/styling.es.js",
+    "types": "./dist/index.d.ts",
+    "unpkg": "./dist/styling.umd.js",
+    "exports": {
+        ".": {
+            "main": "./dist/styling.umd.js",
+            "module": "./dist/styling.es.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./app.css": "./dist/app.css"
+    },
+    "scripts": {
+        "dev": "nodemon --watch ./src --ext ts,tsx --delay 1 --exec 'pnpm run build'",
+        "build": "tailwindcss -i ./src/app.css -o ./dist/app.css && PACKAGE_NAME=styling vite build",
+        "lint": "eslint ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "clean": "rm -rf node_modules",
+        "test": "vitest",
+        "test:w": "vitest --watch",
+        "test:coverage": "vitest --coverage"
+    },
+    "peerDependencies": {
+        "@tailwindcss/cli": "^4",
+        "tailwindcss": "^4",
+        "tailwindcss-animate": "^1"
+    }
+}

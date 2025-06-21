@@ -1,0 +1,35 @@
+{
+    "name": "@core/types",
+    "main": "./dist/types.umd.js",
+    "module": "./dist/types.es.js",
+    "types": "./dist/index.d.ts",
+    "unpkg": "./dist/types.umd.js",
+    "exports": {
+        ".": {
+            "main": "./dist/types.umd.js",
+            "module": "./dist/types.es.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "PACKAGE_NAME=types vite build",
+        "lint": "eslint ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "clean": "rm -rf node_modules",
+        "test": "vitest",
+        "test:w": "vitest --watch",
+        "test:coverage": "vitest --coverage"
+    },
+    "peerDependencies": {
+        "@tailwindcss/cli": "^4",
+        "@tanstack/react-router": "^1",
+        "@tanstack/react-start": "^1",
+        "react": "^19",
+        "react-dom": "^19",
+        "outdent": "^0.8.0",
+        "zod": "^3"
+    },
+    "devDependencies": {
+        "tailwind-merge": "^3.2.0"
+    },
+    "dependencies": {}
+}
